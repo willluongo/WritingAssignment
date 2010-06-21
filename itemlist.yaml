@@ -1,0 +1,34 @@
+---
+    objects:
+        - dog
+        - cat
+        - walrus
+        - baseball
+        - beach ball
+        - computer
+        - sandal
+        - shoelace
+        - chair
+        - TV
+    
+        
+    locations:
+        - your house
+        - your school
+        - the grocery store
+        - the toy store
+        - the moon
+        - a space station
+        - the fire house
+        - the beach
+    
+        
+    devices:
+        - a lost love
+        - a secret crush
+        - a terrible secret
+        - confronting a friend
+        - looking for something lost
+        - an important race
+        - vehicle breaks down
+    
