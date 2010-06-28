@@ -10,6 +10,32 @@
         - shoelace
         - chair
         - TV
+        - teapot
+        - coffee maker
+        - doily
+        - VCR
+        - bed
+        - car
+        - telephone
+        - refridgerator
+        - penguin
+        - book
+        - table
+        - chair
+        - microwave
+        - microphone
+        - couch
+        - tree
+        - swingset
+        - cheek
+        - spice rack
+        - boy
+        - girl
+        - Mom
+        - Dad
+        - Aunt
+        - Uncle
+        
     
         
     locations:
@@ -25,6 +51,12 @@
         - the library
         - the park
         - a bowling alley
+        - a hospital
+        - a parking lot
+        - a secret laboratory
+        - a castle
+        - a drive in theatre
+        - a garage
     
         
     devices:
@@ -35,4 +67,14 @@
         - looking for something lost
         - an important race
         - vehicle breaks down
+        - an alien attack
+        - lost parents
+        - an evil plot
+        - blackmail
+        - boy meets girl
+        - a bank heist
+        - a horrible betrayal
+        - a terrible epidemic
+        - a fight for survival
+        
     

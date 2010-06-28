@@ -5,17 +5,20 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'yaml'
+require 'sinatra/reloader'
 
 get '/' do
     @title = "WritingAssignments"
     
-    bigarray = YAML.load_file( 'itemlist.yaml')
+    bigarray = YAML.load_file('itemlist.yaml')
     
     random_one = rand(bigarray['objects'].length)
     @object_one = bigarray['objects'][random_one]
+    bigarray['objects'].delete_at(random_one)
     
     random_two = rand(bigarray['objects'].length)
     @object_two = bigarray['objects'][random_two]
+    bigarray['objects'].delete_at(random_two)
     
     random_three = rand(bigarray['objects'].length)
     @object_three = bigarray['objects'][random_three]
@@ -28,3 +31,9 @@ get '/' do
     
     haml :mainpage
 end
+
+post "/submitwork" do
+    return params[:work]
+end
+
+

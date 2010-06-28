@@ -1,5 +1,27 @@
 %html
-	%title #{@title}
+	%head
+		%title #{@title}
+		%link{:rel => "stylesheet", :type => "text/css", :href => "theme.css"}
+		:javascript
+			var cnt;
+			function wordcount(count) {
+			var words = count.split(/\s/);
+			cnt = words.length;
+			var ele = document.getElementById('word_count');
+			ele.innerHTML = "You are on word: " + cnt;
+			if (cnt > 249)
+				document.getElementById('buttoon').disabled = false;
+			else
+				document.getElementById('buttoon').disabled = true;		
+			}
 	%body
 		%h1 Testing
-		%p Write a 250 word story using a #{@object_one}, a  #{@object_two}, and a #{@object_three}, at #{@location}, using #{@device}.
+		%p Write a 250 word story using a #{@object_one}, a  #{@object_two}, and a #{@object_three}, at #{@location}, using the following plot device: #{@device}.
+		%form{:method => "post", :action => "submitwork"}
+			%p
+				%textarea{:name => "work", :rows => "30", :cols => "60", :onkeyup => "wordcount(this.value)"}
+				%br
+				%input{:type => "submit", :value => "Submit work", :disabled => "disabled", :id => "buttoon"}
+			
+			%p#word_count
+				You are on word: 0
