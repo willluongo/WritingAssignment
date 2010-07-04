@@ -11,23 +11,19 @@ get '/' do
     @title = "WritingAssignments"
     
     list_hash = YAML.load_file('itemlist.yaml')
+    list_hash['objects']=list_hash['objects'].sort_by{rand}
+    list_hash['locations']=list_hash['locations'].sort_by{rand}
+    list_hash['devices']=list_hash['devices'].sort_by{rand}
     
-    random_one = rand(list_hash['objects'].length)
-    @object_one = list_hash['objects'][random_one]
-    list_hash['objects'].delete_at(random_one)
+    @object_one = list_hash['objects'][1]
+
+    @object_two = list_hash['objects'][2]
     
-    random_two = rand(list_hash['objects'].length)
-    @object_two = list_hash['objects'][random_two]
-    list_hash['objects'].delete_at(random_two)
+    @object_three = list_hash['objects'][3]
     
-    random_three = rand(list_hash['objects'].length)
-    @object_three = list_hash['objects'][random_three]
+    @location = list_hash['locations'][1]
     
-    random_loc = rand(list_hash['locations'].length)
-    @location = list_hash['locations'][random_loc]
-    
-    random_dev = rand(list_hash['devices'].length)
-    @device = list_hash['devices'][random_dev]
+    @device = list_hash['devices'][1]
     
     haml :mainpage
 end
@@ -36,6 +32,9 @@ post "/submitwork" do
     # Testing!
     return params[:work]
 end
+
+def random_list(first_list) do
+    
 
 
 
