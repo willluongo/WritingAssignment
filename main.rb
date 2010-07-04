@@ -32,8 +32,6 @@ post "/submitwork" do
     # Testing!
     return params[:work]
 end
-
-def random_list(first_list) do
     
 
 
